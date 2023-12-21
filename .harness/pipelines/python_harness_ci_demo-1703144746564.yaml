@@ -1,0 +1,37 @@
+pipeline:
+  identifier: Build_cpamarthi_python_harness_ci_demo_1703144838682
+  name: Build python_harness_ci_demo
+  orgIdentifier: default
+  projectIdentifier: First_Project
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1703144716521
+        repoName: cpamarthi/python_harness_ci_demo
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: dockerbuild
+                  name: docker_build
+                  spec:
+                    image: plugins/docker
+                    settings:
+                      dry_run: "true"
+                      repo: hello/world
+                      tags: latest
+                  timeout: ""
+                  type: Plugin
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
