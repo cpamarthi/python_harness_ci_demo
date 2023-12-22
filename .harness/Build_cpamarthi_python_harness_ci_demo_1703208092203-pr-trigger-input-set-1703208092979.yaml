@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_cpamarthi_python_harness_ci_demo_1703208092203-pr-trigger-input-set
+  identifier: Build_cpamarthi_python_harness_ci_demo_1703208092203prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_cpamarthi_python_harness_ci_demo_1703208092203
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
