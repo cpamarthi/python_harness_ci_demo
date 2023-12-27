@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_cpamarthi_python_harness_ci_demo_1703661888048-push-trigger-input-set
+  identifier: Build_cpamarthi_python_harness_ci_demo_1703661888048pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: First_Project
+  pipeline:
+    identifier: Build_cpamarthi_python_harness_ci_demo_1703661888048
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
