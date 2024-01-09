@@ -1,5 +1,4 @@
 FROM python:3.5.1-alpine
-MAINTAINER Greg Taylor <gtaylor@gc-taylor.com>
 
 RUN pip install --upgrade pip setuptools wheel
 COPY wheeldir /opt/app/wheeldir
