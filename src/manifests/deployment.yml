@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-app
+  labels:
+    app: http-app
+spec:
+  replicas: 1 # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: http-app
+  template:
+    metadata:
+      labels:
+        app: http-app
+    spec:
+      containers:
+      - name: python-http-app
+        image: pamarthich.jfrog.io/pamch-docker/harness:v1  # Replace with your container image and tag
+        ports:
+        - containerPort: 8000  # Adjust the port as needed
+      imagePullSecrets:
+      - name: jfrog-registry
